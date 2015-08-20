@@ -31,9 +31,9 @@ class OwnershipsController < ApplicationController
     # params[:type]の値ににHaveボタンが押された時にはの時は「Have」,
     # Wantボタンがされた時には「Want」が設定されています。
     if params[:type] == "Have"
-      current_user.have(@item.id)
+      current_user.have(@item)
     else
-      current_user.want(@item.id)
+      current_user.want(@item)
     end
 
   end
@@ -45,9 +45,9 @@ class OwnershipsController < ApplicationController
     # params[:type]の値ににHavedボタンが押された時にはの時は「Have」,
     # Wantedボタンがされた時には「Want」が設定されています。
     if params[:type] == "Haved"
-      current_user.unhave(@item.id)
+      current_user.unhave(@item)
     else
-      current_user.unwant(@item.id)
+      current_user.unwant(@item)
     end
 
   end
